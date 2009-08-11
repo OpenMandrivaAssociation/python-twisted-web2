@@ -1,5 +1,5 @@
 %define version 8.1.0
-%define rel 2
+%define rel 3
 
 Summary:        An HTTP/1.1 protocol implementation together with clients and servers
 Name:           python-twisted-web2
@@ -12,6 +12,7 @@ URL:            http://twistedmatrix.com/trac/wiki/TwistedWeb2
 BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires:	python-devel python-twisted-core
 Requires:       python-twisted-core
+Patch0:		TwistedWeb2-8.1.0-sagemath.patch
 # removed, cause problem regarding submodule for twisted
 #BuildArch:      noarch
 
@@ -22,6 +23,7 @@ the twisted python framework.
 This version is still experimental.
 %prep
 %setup -q -n TwistedWeb2-%version
+%patch0	-p1
 
 %build
 %__python setup.py build
