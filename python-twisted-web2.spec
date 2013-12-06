@@ -1,11 +1,9 @@
-%define version 8.1.0
 %define	debug_package	%nil
-%define rel 4
 
 Summary:        An HTTP/1.1 protocol implementation together with clients and servers
 Name:           python-twisted-web2
-Version: %version
-Release: %mkrel %rel
+Version:        8.1.0
+Release:        5
 Source0:        http://tmrc.mit.edu/mirror/twisted/Web2/8.1/TwistedWeb2-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
@@ -32,8 +30,6 @@ This version is still experimental.
 %__python setup.py install --root %buildroot --install-purelib=%py_platsitedir
 
 %files
-%defattr(0755,root,root,0755)
-%defattr(0644,root,root,0755)
 %doc LICENSE README 
 %py_platsitedir/Twisted*egg-info
 %py_platsitedir/twisted/web2/
