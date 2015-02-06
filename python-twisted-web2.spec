@@ -3,7 +3,7 @@
 Summary:        An HTTP/1.1 protocol implementation together with clients and servers
 Name:           python-twisted-web2
 Version:        8.1.0
-Release:        5
+Release:        6
 Source0:        http://tmrc.mit.edu/mirror/twisted/Web2/8.1/TwistedWeb2-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
