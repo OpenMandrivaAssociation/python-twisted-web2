@@ -3,13 +3,14 @@
 Summary:        An HTTP/1.1 protocol implementation together with clients and servers
 Name:           python-twisted-web2
 Version:        8.1.0
-Release:        6
+Release:        7
 Source0:        http://tmrc.mit.edu/mirror/twisted/Web2/8.1/TwistedWeb2-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
 URL:            http://twistedmatrix.com/trac/wiki/TwistedWeb2
-BuildRequires:	python-devel python-twisted-core
-Requires:       python-twisted-core
+BuildRequires:	python-devel
+BuildRequires:  python3egg(twisted)
+Requires:       python3dist(twisted)
 Patch0:		TwistedWeb2-8.1.0-sagemath.patch
 # removed, cause problem regarding submodule for twisted
 #BuildArch:      noarch
